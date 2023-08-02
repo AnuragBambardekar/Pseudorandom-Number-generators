@@ -43,3 +43,6 @@ It's important to note that while PRNGs are sufficient for many applications, th
 - Square it and pick the middle two digits and discard the rest.
 - Now again square the selected middle two digits in the previous step.
 - Repeat.
+
+## References
+- https://en.wikipedia.org/wiki/Middle-square_method
