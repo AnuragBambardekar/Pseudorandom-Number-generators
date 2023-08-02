@@ -25,8 +25,8 @@ def middle_square(seed, num_digits):
         yield seed
 
 if __name__ == "__main__":
-    seed = 540
-    num_digits = 4
+    seed = 1234 #42
+    num_digits = 4 #2
     generator = middle_square(seed, num_digits)
     
     # Generate and print the first 10 pseudorandom numbers
@@ -46,6 +46,26 @@ while number not in already_seen:
     counter += 1
     already_seen.add(number)
     number = int(str(number * number).zfill(8)[2:6])  # zfill adds padding of zeroes
+    print(f"#{counter}: {number}")
+
+print(f"We began with {seed_number} and"
+      f" have repeated ourselves after {counter} steps"
+      f" with {number}.")
+"""
+
+"""
+# For two-digit number:
+
+seed_number = int(input("Please enter a two-digit number:\n[##] "))
+number = seed_number
+already_seen = set()
+counter = 0
+
+while number not in already_seen:
+    counter += 1
+    already_seen.add(number)
+    # number = int(str(number * number).zfill(8)[2:6])  # zfill adds padding of zeroes
+    number = int(str(number * number).zfill(4)[1:3])
     print(f"#{counter}: {number}")
 
 print(f"We began with {seed_number} and"
