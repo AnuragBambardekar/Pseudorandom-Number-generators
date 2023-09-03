@@ -74,5 +74,13 @@ Continue this process as many times as needed to generate the sequence of random
 
 Sequence of random numbers generated using the Lehmer algorithm with these parameters would be: `2, 10, 6, and so on`.
 
+- The Sinclair ZX81 and its successors use the Lehmer RNG with parameters m = 2<sup>16</sup> + 1 = 65,537 (a Fermat prime F4) and a = 75 (a primitive root modulo F<sub>4</sub>). 
+
+- The CRAY random number generator RANF is a Lehmer RNG with the power-of-two modulus m = 2<sup>48</sup> and a = 44,485,709,377,909.
+
+### Non-randomness of Lehmer's Algorithm:
+
+![Non-randomness of Lehmer's Algorithm](Lehmer_Algorithm/Figure_1.png)
+
 ## References
 - https://en.wikipedia.org/wiki/Middle-square_method
