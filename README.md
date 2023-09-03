@@ -44,5 +44,35 @@ It's important to note that while PRNGs are sufficient for many applications, th
 - Now again square the selected middle two digits in the previous step.
 - Repeat.
 
+### **Lehmer Algorithm (1951, D. H. Lehmer)**
+
+- Sometimes also referred to as the Park–Miller random number generator (after Stephen K. Park and Keith W. Miller), is a type of linear congruential generator (LCG) that operates in multiplicative group of integers modulo n. 
+
+$$X_{k+1} = a \cdot X_{k} \mod m$$
+
+where the `modulus m` is a prime number or a power of a prime number, the multiplier a is an element of high multiplicative order modulo `m` (e.g., a primitive root modulo n), and the seed `X`<sub>`0`</sub> is coprime to m.
+
+- Other names are multiplicative linear congruential generator (MLCG) and multiplicative congruential generator (MCG).
+
+**Example:** <br>
+
+Initial seed (starting point): 7 <br>
+Multiplier (a): 5 <br>
+Modulus (m): 11 <br>
+
+**Most commonly, the modulus is chosen as a prime number.**
+
+**For the Lehmer RNG, the initial seed X<sub>0</sub> must be coprime to the modulus m.**
+
+Formula: seed = (a * seed) % m
+
+seed = (5 * 7) % 11 = 2 <br>
+seed = (5 * 2) % 11 = 10 <br>
+seed = (5 * 10) % 11 = 6 <br>
+
+Continue this process as many times as needed to generate the sequence of random numbers.
+
+Sequence of random numbers generated using the Lehmer algorithm with these parameters would be: `2, 10, 6, and so on`.
+
 ## References
 - https://en.wikipedia.org/wiki/Middle-square_method
