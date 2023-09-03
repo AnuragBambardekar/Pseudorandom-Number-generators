@@ -9,7 +9,6 @@ def find_coprimes(number):
     
     return coprimes
 
-# Example usage:
 if __name__ == "__main__":
     input_number = 2147483647
     coprimes = find_coprimes(input_number)
